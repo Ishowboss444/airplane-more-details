@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+* {
+  font-family: "Google Sans", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: lightblue;
+}
+
+#canvas {
+  background-color: white;
+  border: 1px solid;
+  box-shadow: 1px 1px 10px black;
+  border-radius: 8px;
+}
+
+.div2 {
+  border: 1px solid;
+  width: 600px;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div2 button {
+  /* border: 1px solid; */
+  width: 290px;
+  height: 60px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid;
+  background-color: red;
+  transition: 1s linear;
+  animation: spin 7s ease infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(900px);
+  }
+}/*# sourceMappingURL=style.css.map */
