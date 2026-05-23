@@ -12,7 +12,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            background:lightblue;
+          background: black;
+            background:url("./images/sky.jpg");
         }
         #canvas{
             // position: relative;
@@ -21,25 +22,30 @@
             box-shadow: 1px 1px 10px black;
             border-radius: 8px;
             // overflow: hidden;
+          background-image: url("./images/bg.jpg");
         }
         .div2{
             border: 1px solid;
             width: 600px;
             height: 100px;
-            // position: absolute;
-            // bottom: 0;
             border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
-button{
+        button{
                 /* border: 1px solid; */
                 width:290px;
                 height: 60px;
                 border-radius: 4px;
-                background-color: black;
+                background-color: transparent;
+                outline: none;
                 color: white;
                 font-size: 20px;
+                transition: 0.2s ;
+                border: 1px solid white;
+                &:hover{
+                  box-shadow: 1px 1px 4px white;
+        }
 }
 }
 .ball{

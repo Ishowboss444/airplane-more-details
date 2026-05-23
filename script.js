@@ -140,8 +140,13 @@ function update() {
             bomgenerator()
         }
         context.font = '30px Arial';
-        context.fillStyle = 'red';
+
         context.fillText(score, 10, 30);
+        if(score >= 0 ){
+            context.fillStyle = 'white';
+        }else{
+            context.fillStyle = "red"
+        }
     }
 
 
@@ -154,7 +159,7 @@ function moveplane(event) {
         return;
     }
     // turn = 0
-    if ((event.key == 'ArrowLeft')) {
+    if ((event.key == 'ArrowLeft' || event.key == 'a')) {
         //left
         turn = -15;
         airplane.x += turn;
@@ -162,7 +167,7 @@ function moveplane(event) {
         if (airplane.x <= 0) {
             airplane.x = 0;
         }
-    } else if (event.key == 'ArrowRight') {
+    } else if (event.key == 'ArrowRight' || event.key == 'd') {
         turn = 15;
         airplane.x += turn;
         // console.log(airplane.x);
@@ -222,6 +227,7 @@ function gameEnd() {
     bullets.length = 0;
     div2.style.display = 'block';
 
+
 }
 
 function restart() {
@@ -231,10 +237,11 @@ function restart() {
     if (gameover === true) {
         gameover = false;
     }
+    div2.style.display= "none"
 }
 
 document.addEventListener('keypress', function (w) {
-    if (w.key == 'w') {
+    if (w.key == 'w' || w.code == 'Space') {
         // console.log("Ctrl")
         shooting();
         // drawbullet()

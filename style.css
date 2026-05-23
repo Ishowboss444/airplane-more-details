@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 
 body {
@@ -13,7 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background: lightblue;
+  background: black;
+  background: url("./images/sky.jpg");
 }
 
 #canvas {
@@ -21,6 +21,7 @@ body {
   border: 1px solid;
   box-shadow: 1px 1px 10px black;
   border-radius: 8px;
+  background-image: url("./images/bg.jpg");
 }
 
 .div2 {
@@ -37,9 +38,15 @@ body {
   width: 290px;
   height: 60px;
   border-radius: 4px;
-  background-color: black;
+  background-color: transparent;
+  outline: none;
   color: white;
   font-size: 20px;
+  transition: 0.2s;
+  border: 1px solid white;
+}
+.div2 button:hover {
+  box-shadow: 1px 1px 4px white;
 }
 
 .ball {
@@ -59,4 +66,6 @@ body {
   to {
     transform: translateY(900px);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
